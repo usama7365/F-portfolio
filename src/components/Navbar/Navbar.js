@@ -250,7 +250,7 @@ function Navbar() {
 
                         {/* <Fade left> */}
                             <NavLink
-                                to='/#blog'
+                                to='/blog'
                                 smooth={true}
                                 spy='true'
                                 duration={2000}
