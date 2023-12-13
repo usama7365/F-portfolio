@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
-import Fade from 'react-reveal/Fade';
+// import Fade from 'react-reveal/Fade';
 import { IoMenuSharp, IoHomeSharp } from 'react-icons/io5';
 import { HiDocumentText } from 'react-icons/hi';
 import { BsFillGearFill } from 'react-icons/bs';
@@ -178,7 +178,7 @@ function Navbar() {
 
                 <div onClick={handleDrawerClose}>
                     <div className='navLink--container'>
-                        <Fade left>
+                        {/* <Fade left> */}
                             <NavLink
                                 to='/'
                                 smooth={true}
@@ -194,9 +194,9 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        {/* </Fade> */}
 
-                        <Fade left>
+                        {/* <Fade left> */}
                             <NavLink
                                 to='/#about'
                                 smooth={true}
@@ -210,9 +210,9 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        {/* </Fade> */}
 
-                        <Fade left>
+                        {/* <Fade left> */}
                             <NavLink
                                 to='/#resume'
                                 smooth={true}
@@ -228,9 +228,9 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        {/* </Fade> */}
 
-                        <Fade left>
+                        {/* <Fade left> */}
                             <NavLink
                                 to='/#services'
                                 smooth={true}
@@ -246,9 +246,9 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        {/* </Fade> */}
 
-                        <Fade left>
+                        {/* <Fade left> */}
                             <NavLink
                                 to='/#blog'
                                 smooth={true}
@@ -264,9 +264,9 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        {/* </Fade> */}
 
-                        <Fade left>
+                        {/* <Fade left> */}
                             <NavLink
                                 to='/#contacts'
                                 smooth={true}
@@ -280,7 +280,7 @@ function Navbar() {
                                     </span>
                                 </div>
                             </NavLink>
-                        </Fade>
+                        {/* </Fade> */}
                     </div>
                 </div>
             </Drawer>

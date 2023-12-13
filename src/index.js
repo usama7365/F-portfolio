@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -9,19 +9,12 @@ import ThemeContextProvider from './contexts/ThemeContext'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-
-root.render(
-  <React.StrictMode>
-
+ReactDOM.render(
     <ThemeContextProvider>
       <App />
-    </ThemeContextProvider>
-    </React.StrictMode>
-
-  );
+    </ThemeContextProvider>,
+  document.getElementById('root')
+);
 
 
 reportWebVitals();
