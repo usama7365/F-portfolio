@@ -6,9 +6,10 @@ import { HiDocumentText } from 'react-icons/hi';
 import { BsFillGearFill } from 'react-icons/bs';
 import { MdPhone } from 'react-icons/md';
 import { FaUser, FaFolderOpen } from 'react-icons/fa';
-import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import CloseIcon from '@material-ui/icons/Close';
+import { makeStyles } from '@mui/styles';
+
+import Drawer from '@mui/material/Drawer';
+import CloseIcon from '@mui/icons-material/Close';
 
 import './Navbar.css';
 import { headerData } from '../../data/headerData';
@@ -39,10 +40,10 @@ function Navbar() {
             '&:hover': {
                 color: theme.primary,
             },
-            [t.breakpoints.down('sm')]: {
+            [t.breakpoints?.down('sm')]: {
                 fontSize: '2.5rem',
             },
-            [t.breakpoints.down('xs')]: {
+            [t.breakpoints?.down('xs')]: {
                 fontSize: '2rem',
             },
         },
@@ -57,7 +58,7 @@ function Navbar() {
             overflow: 'hidden',
             borderTopRightRadius: '40px',
             borderBottomRightRadius: '40px',
-            [t.breakpoints.down('sm')]: {
+            [t.breakpoints?.down('sm')]: {
                 width: '12em',
             },
         },
@@ -73,7 +74,7 @@ function Navbar() {
             '&:hover': {
                 color: theme.tertiary,
             },
-            [t.breakpoints.down('sm')]: {
+            [t.breakpoints?.down('sm')]: {
                 right: 20,
                 top: 20,
             },
@@ -97,7 +98,7 @@ function Navbar() {
                 background: theme.primary,
                 color: theme.secondary,
             },
-            [t.breakpoints.down('sm')]: {
+            [t.breakpoints?.down('sm')]: {
                 width: '100%',
                 padding: '0 25px',
                 height: '55px',
@@ -108,19 +109,19 @@ function Navbar() {
             width: '50%',
             fontSize: '1.3rem',
             fontWeight: 600,
-            [t.breakpoints.down('sm')]: {
+            [t.breakpoints?.down('sm')]: {
                 fontSize: '1.125rem',
             },
         },
         drawerIcon: {
             fontSize: '1.6rem',
-            [t.breakpoints.down('sm')]: {
+            [t.breakpoints?.down('sm')]: {
                 fontSize: '1.385rem',
             },
         },
     }));
 
-    const classes = useStyles();
+    const classes = useStyles(theme);
 
     const shortname = (name) => {
         if (name.length > 12) {

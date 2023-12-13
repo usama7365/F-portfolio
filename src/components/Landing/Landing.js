@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from 'react';
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/styles';
+
 import './Landing.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { headerData } from '../../data/headerData';
@@ -36,7 +37,7 @@ function Landing() {
                 color: theme.secondary,
                 border: `3px solid ${theme.tertiary}`,
             },
-            [t.breakpoints.down('sm')]: {
+            [t.breakpoints?.down('sm')]: {
                 width: '180px',
             },
         },
@@ -58,7 +59,7 @@ function Landing() {
                 color: theme.tertiary,
                 border: `3px solid ${theme.tertiary}`,
             },
-            [t.breakpoints.down('sm')]: {
+            [t.breakpoints?.down('sm')]: {
                 display: 'none',
             },
         },
@@ -116,7 +117,7 @@ function Landing() {
         init();
     }, []);
 
-    const classes = useStyles();
+    const classes = useStyles(theme);
 
     return (
         <div className='landing'>
